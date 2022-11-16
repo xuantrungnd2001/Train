@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span th:if="${test}">
+    Base64 encoded string:
+    <span th:text="${test}"></span>
+</span>
+<span th:if="${test2}">
+    <br>
+Data after deserialization:
+<br>
+Username:
+<span th:text="${test2.getUsername()}"></span>
+<br>
+Email:
+<span th:text="${test2.getEmail()}"></span>
+<br>
+Date:
+<input type="date" th:value="${test2.getDate()}">
+<br>
+Gender:
+<span th:text="${test2.getGender()}"></span>
+</span>
+
+<form action="#" th:action="@{/deserialize}" method="post" >
+    <div th:if="${test}">
+        <textarea name="deserialize" cols="30" rows="10" th:text="${test}"></textarea>
+    </div>
+    <div th:unless="${test}">
+        <textarea name="deserialize" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">Deserialize</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="post" th:action="@{/serialize}" th:object="${student}">
+    <label>Username:</label>
+    <input th:field="*{username}" type="text">
+    <label>Email</label>
+    <input th:field="*{email}" type="text">
+    <label>Date</label>
+    <input th:field="*{date}" type="date">
+    <label>Gender</label>
+    <input th:field="*{gender}" type="text">
+    <button type="submit">Serialize</button>
+</form>
+</body>
+</html>
